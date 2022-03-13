@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jsselectors</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#plant2").hide();
+            $("#plant").click(function(){
+                $("#plant2").show();
+            });
+            $("#plant").click(function(){
+                $("#plant").hide();
+            });
+
+            
+        });
+    </script>
+    <style>
+        body{
+            display: flex;
+            margin-left: 200px;
+            
+            
+        }
+        #plant{
+            position: absolute;
+            margin-left: 100px;
+            z-index: border-box;
+            width: 50%;
+        }
+        #plant2{
+            position: absolute;
+            margin: 0;
+            z-index: border-box;
+            width: 70%;
+            
+        }
+    </style>
+</head>
+<body>
+    <img id="plant" src="img/plant.svg" alt="plant">
+    <img id="plant2" src="img/plant2.svg" alt="plant2">
+    
+</body>
+</html>
